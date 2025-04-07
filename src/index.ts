@@ -24,12 +24,14 @@ import orderRouter from "./routes/orders";
 import orderItemRouter from "./routes/orderItems";
 import stripeRouter from "./routes/stripe";
 import authRouter from "./routes/auth";
+import searchRouter from "./routes/search";
 app.use('/products', productRouter)
 app.use('/customers', customerRouter)
 app.use('/orders', orderRouter)
 app.use('/order-items', orderItemRouter)
 app.use('/stripe', stripeRouter)
 app.use('/auth', authRouter)
+app.use('/search', searchRouter)
 
 // Attempt to connect to the database
 connectDB()
