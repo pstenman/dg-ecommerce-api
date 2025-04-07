@@ -17,10 +17,10 @@ export const searchGoogle = async (req: Request, res: Response): Promise<any> =>
             }    
         })
 
-        if (response.data.items) {
-            res.json({ items: response.data.items})
+        if (response.data.items && response.data.items.length > 0) {
+            res.json({ items: response.data.items });
         } else {
-            res.status(400).json({ error: "No search results found"});
+            res.status(400).json({ error: "No search results found" });
         }
 
     } catch (error) {
