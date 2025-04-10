@@ -27,6 +27,8 @@ export const checkoutSessionHosted = async (req: Request, res: Response) => {
           cancel_url: 'https://dg-ecommerce-client.vercel.app/checkout',
           client_reference_id: orderId
         });
+
+        console.log("✅ Stripe Session created with ID:", session.id)
     
         res.json({ id: session.id });
       } catch (error) {
