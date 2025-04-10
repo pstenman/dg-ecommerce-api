@@ -70,6 +70,8 @@ export const getOrderById = async (req: Request, res: Response) => {
 
 export const getOrderByPaymentId = async (req: Request, res: Response) => {
   const id: string = req.params.id;
+
+  console.log("🛬 Incoming GET /orders/payment/:id with session_id:", id);
   
   try {
     const sql = `
